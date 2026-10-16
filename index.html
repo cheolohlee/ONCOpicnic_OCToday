@@ -423,7 +423,7 @@ const AREAS = {
 /* 조원 표기: 이름|소속|역할(L=이끌이, S=서포터) */
 const GROUPS = [
   { id: 1, area: 'seoul', keyword: '열정', en: 'Passion',
-    members: '이현주||L,정은식|BC|S,장유진|BC ADC,김영호|BC SM,박정식|GC,한지수|GI,이정헌|GI East,김성민|GUGY,최선아|GUGY,이다희|LC,김치운|LC East,백지연|LC IO,박진민|LC West',
+    members: '이현주||L,정은식|BC|S,이정헌|GI East,김영호|BC SM,장유진|BC ADC,박정식|GC,한지수|GI,최선아|GUGY,이다희|LC,김치운|LC East,백지연|LC IO,박진민|LC West',
     questions: [
       '요즘 일 말고 가장 푹 빠져 있는 것은? (취미·덕질 무엇이든)',
       '지금 하고 있는 일 중에 가장 몰입되는 순간은 언제인가요?',
@@ -431,7 +431,7 @@ const GROUPS = [
       '열정이 식었다고 느낄 때, 다시 불붙이는 나만의 방법이 있나요?',
     ] },
   { id: 2, area: 'seoul', keyword: '동기부여', en: 'Motivation',
-    members: '김승은||L,서현희|GUGY,이시재|BC,엄세현|GC,김미래|GI East,이상훈|GI East|S,하상민|GI West,박민정|GUGY,유승종|LC,이상현|LC,최승민|LC East,김혜은|LC West,이서경|LC West',
+    members: '김승은||L,이상훈|GI East|S,이상현|LC,유승종|LC,정은지|GUGY,이승진|LC IO,서현희|GUGY,김미래|GI East,최승민|LC East,김혜은|LC West',
     questions: [
       '밸런스게임: 칭찬 한마디 vs. 깜짝 커피 쿠폰, 더 힘이 나는 쪽은?',
       '나를 움직이게 하는 건 보상인가요, 인정인가요, 아니면 성장인가요?',
@@ -439,7 +439,7 @@ const GROUPS = [
       '동료의 어떤 행동이나 말이 나에게 동기부여가 되었나요?',
     ] },
   { id: 3, area: 'seoul', keyword: 'Work & Life Balance', en: '워라밸',
-    members: '오재윤|GI West|L,박지윤|BC ADC,임지훈|BC SM,박영준|GC,성소라|GI East,양준영|GI West,정은지|GUGY,한관희|GUGY,오소민|LC,변경원|LC East|S,이승진|LC IO,천혜원|LC IO',
+    members: '오재윤|GI West|L,변경원|LC East|S,박지윤|BC ADC,임지훈|BC SM,박영준|GC,성소라|GI East,양준영|GI West,한관희|GUGY,오소민|LC,천혜원|LC IO,하상민|GI West,엄세현|GC,이서경|LC West',
     questions: [
       '밸런스게임: 주 4일(하루 10시간) vs. 주 5일(하루 8시간)?',
       "나에게 '균형 잡힌 삶'이란 구체적으로 어떤 모습인가요?",
@@ -447,7 +447,7 @@ const GROUPS = [
       '워라밸을 지키기 위해 팀/회사가 도와줄 수 있는 건 뭐가 있을까요?',
     ] },
   { id: 4, area: 'seoul', keyword: '성장', en: 'Growth',
-    members: '이윤지||L,김화경|Hema,윤홍열|BC ADC,장재우|BC,유정현|BC SM,송현준|GC,윤지애|GC,김희정|GI,조홍석|GI West,김가람|GUGY,이보민|LC|S,하현정|LC East,한수경|LC West',
+    members: '이윤지||L,이보민|LC|S,하현정|LC East,김화경|Hema,윤홍열|BC ADC,유정현|BC SM,송현준|GC,박민정|GUGY,윤지애|GC,김희정|GI,조홍석|GI West,김가람|GUGY,한수경|LC West',
     questions: [
       '요즘 새로 배우고 있거나 배워보고 싶은 것은? (일과 무관해도 ok)',
       '입사했을 때의 나와 지금의 나, 가장 크게 달라진 점은 무엇인가요?',
@@ -455,7 +455,7 @@ const GROUPS = [
       '성장했다고 느꼈던 결정적 순간(계기)이 있었나요?',
     ] },
   { id: 5, area: 'seoul', keyword: '협업/소통', en: 'Collaboration & Communication',
-    members: '송진욱||L,김지영|BC|S,고흥국|BC ADC,은자민|BC SM,김한솔|GI,이재현|GI East,박해원|GI West,김영태|GUGY,이하경|GUGY,이효선|Admin,김진주|LC IO,신아린|LC IO,안승주|LC IO',
+    members: '송진욱||L,김지영|BC|S,김성민|GUGY,김진주|LC IO,이하경|GUGY,이재현|GI East,고흥국|BC ADC,은자민|BC SM,김한솔|GI,장재우|BC,박해원|GI West,김영태|GUGY,이효선|Admin,신아린|LC IO,안승주|LC IO',
     questions: [
       '밸런스게임: 전화로 바로 vs. 메신저로 정리해서, 나는 어느 쪽?',
       '함께 일하고 싶은 동료의 조건은 무엇인가요?',
@@ -463,7 +463,7 @@ const GROUPS = [
       '우리 팀의 소통 방식에서 바꾸고 싶은 한 가지가 있다면?',
     ] },
   { id: 6, area: 'dj', keyword: '회복탄력성', en: 'Resilience',
-    members: '홍진명||L,조형진|BC SM|S,이소영|GI West,권성환|GUGY,임재진|LC IO,송진호|LC West,장예린|LC West',
+    members: '홍진명||L,조형진|BC SM|S,이소영|GI West,권성환|GUGY,임재진|LC IO,송진호|LC West,장예린|LC West,이시재|BC',
     questions: [
       '힘든 하루 끝, 나를 달래주는 소울푸드나 장소는?',
       '최근에 겪은 어려움을 어떻게 극복했나요?',
@@ -471,7 +471,7 @@ const GROUPS = [
       '스트레스를 받을 때 가장 먼저 하는 행동은 무엇인가요?',
     ] },
   { id: 7, area: 'bd', keyword: '소속감/조직문화', en: 'Belonging & Culture',
-    members: '장우석||L,정민경|BC ADC,조재원|BC SM,전주연|GI East,조민정|GI East,박병찬|GUGY,이철오|GUGY|S,김유진|LC East,문주영|LC East,이수진|LC IO,이창|LC IO',
+    members: '장우석||L,이철오|GUGY|S,이창|LC IO,문주영|LC East,정민경|BC ADC,조재원|BC SM,전주연|GI East,조민정|GI East,박병찬|GUGY,김유진|LC East,이수진|LC IO',
     questions: [
       '우리 팀을 한 단어(또는 동물)로 표현한다면?',
       '우리 팀(회사)의 일원이라는 게 가장 실감 났던 순간은 언제인가요?',
@@ -621,7 +621,7 @@ const SPOTS = {
   const ORIGINAL_LAYOUT = layoutOf();
   let teamsMoved = false;
   (function () {
-    const saved = store.get('teamLayout', null);
+    const saved = store.get('teamLayout-final', null);
     if (saved && typeof saved === 'object') { applyLayout(saved); teamsMoved = true; }
   })();
   function moveMember(name, toId, beforeName) {
@@ -636,12 +636,12 @@ const SPOTS = {
     if (at === -1) to.members.push(member); else to.members.splice(at, 0, member);
     GROUPS.forEach(refreshRoles);
     teamsMoved = true;
-    store.set('teamLayout', layoutOf());
+    store.set('teamLayout-final', layoutOf());
   }
   function resetLayout() {
     applyLayout(ORIGINAL_LAYOUT);
     teamsMoved = false;
-    store.del('teamLayout');
+    store.del('teamLayout-final');
   }
 
   const DAYS = ['일', '월', '화', '수', '목', '금', '토'];
