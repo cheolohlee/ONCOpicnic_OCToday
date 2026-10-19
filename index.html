@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ONCO PICNIC OCTODAY</title>
-<meta name="description" content="OBU 온코피크닉 단풍놀이 안내 · 조별 Mission · 인증과 결과 공유">
+<meta name="description" content="OBU 온코피크닉 안내 및 비용 정산 정보">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#2d4837">
 <meta property="og:title" content="ONCO PICNIC OCTODAY">
-<meta property="og:description" content="OBU 온코피크닉 단풍놀이 안내 · 조별 Mission · 인증과 결과 공유">
+<meta property="og:description" content="OBU 온코피크닉 안내 및 비용 정산 정보">
 <script>
 /* ============================================================
    구글 시트 연결 주소
@@ -888,27 +888,13 @@ const SPOTS = {
       h('header', { class: 'hero' },
         IMG.leaf ? h('img', { class: 'leaf', src: IMG.leaf, alt: '' }) : null,
         h('h1', null, 'ONCO PICNIC OCTODAY'),
-        h('p', null, 'OBU 온코피크닉 단풍놀이 안내'),
-        h('div', { class: 'dates' }, h('span', null, '서울 ', h('b', null, '10.26(월) ~ 11.6(금)')), h('span', null, '지방 ', h('b', null, '11.2(월) ~ 11.13(금)')))),
-
-      h('section', { class: 'stack' },
-        title('일정', '조별로 주어진 기간 안에서 하루를 정해 단풍놀이 + Mission 토크를 진행합니다'),
-        h('div', { class: 'grid2' },
-          h('div', { class: 'card sched' },
-            h('div', { class: 'row' }, h('span', { class: 'pill' }, '서울'), h('span', { class: 'muted' }, '1조 ~ 5조')),
-            h('p', { class: 'range' }, '10.26', h('small', null, ' (월)'), ' ~ 11.6', h('small', null, ' (금)')),
-            h('p', { class: 'dur' }, '2주간')),
-          h('div', { class: 'card sched' },
-            h('div', { class: 'row' }, h('span', { class: 'pill accent' }, '지방'), h('span', { class: 'muted' }, '6조 대전광주 / 7조 대구부산')),
-            h('p', { class: 'range' }, '11.2', h('small', null, ' (월)'), ' ~ 11.13', h('small', null, ' (금)')),
-            h('p', { class: 'dur' }, '2주간')))),
+        h('p', null, 'OBU 온코피크닉 단풍놀이 안내')),
 
       h('section', { class: 'stack' },
         h('h3', { class: 'h3' }, '진행 순서'),
-        h('div', { class: 'grid3' },
-          stepCard(1, '조별 일정·장소 확정', '날짜와 장소는 조원들과 자유롭게 상의한 후 결정해 주세요', '#cert', '일정 등록하기'),
-          stepCard(2, '단풍놀이 + Mission - Dinner', '조별 키워드와 예시 질문을 바탕으로 편하게 대화를 나눠 주세요', '#mission', '질문 카드 열기'),
-          stepCard(3, '결과 공유', '행사 진행 중 혹은 종료 후 자유롭게 이야기한 내용을 정리해서 온코피크닉 웹페이지 하단 인증탭에 입력으로 작성해주세요', '#results', '결과 보기'))),
+        h('div', { class: 'grid2' },
+          stepCard(1, '단풍놀이 + Mission - Dinner', '미션 탭의 예시 질문을 바탕으로 편하게 대화를 나눠 주세요', '#mission', '질문 카드 열기'),
+          stepCard(2, '결과 공유', '행사 진행 중 혹은 종료 후 자유롭게 이야기한 내용을 정리해서 온코피크닉 웹페이지 하단 인증탭에 입력으로 작성해주세요', '#results', '결과 보기'))),
 
       h('section', { class: 'stack' },
         title('Mission'),
@@ -926,12 +912,21 @@ const SPOTS = {
           GROUND_RULES.map(function (r, i) { return h('p', { class: 'rule' }, h('span', { class: 'n' }, i + 1), h('span', null, r)); }))),
 
       h('section', { class: 'stack' },
-        h('div', { class: 'row between' }, h('h3', { class: 'h3' }, '조별 키워드'), h('span', { class: 'muted small' }, '1조 1키워드 · 총 7개')),
-        h('div', { class: 'tablewrap' }, h('table', null,
-          h('thead', null, h('tr', null, h('th', null, '조'), h('th', null, '키워드'), h('th', null, '이끌이'), h('th', null, '서포터'))),
-          h('tbody', null, GROUPS.map(function (g) {
-            return h('tr', null, h('td', { class: 'g' }, g.id + '조'), h('td', null, h('b', null, g.keyword)), h('td', null, g.leader), h('td', null, g.supporter));
-          }))))),
+        title('비용 및 정산 안내', '식사 비용은 1인당 50,000원 이내로 이용해 주세요'),
+        h('div', { class: 'panel stack' },
+          h('div', { class: 'row', style: 'align-items:center; gap:12px' },
+            h('span', { class: 'pill accent' }, '식사 비용 기준'),
+            h('strong', { style: 'font-size:22px; color:var(--accent-ink)' }, '1인당 50,000원 이내')),
+          h('p', { class: 'muted small' }, 'Concur 비용 정산 시 아래 항목을 기준으로 입력해 주세요.'),
+          h('div', { class: 'card stack' },
+            h('b', null, 'Expense type'),
+            h('p', null, '식사 (직원 회식비 또는 식사 with non HCP)')),
+          h('div', { class: 'card stack' },
+            h('b', null, 'Business Purpose'),
+            h('p', null, 'OBU 온코피크닉 미팅')),
+          h('div', { class: 'card stack' },
+            h('b', null, 'Project Code'),
+            h('p', null, '(Z3550600002) Z355-Other Activity_KR')))),
 
       h('section', { class: 'tips' },
         h('h3', null, '토크 Tip'),
@@ -1258,6 +1253,15 @@ const SPOTS = {
   // ───────── 화면: 인증 · 제출 ─────────
   let certNotice = null; // {ok:boolean, text:string}
   let certBusy = false;
+  const TEAM_PLACES = {
+    1: '남산하늘숲길',
+    2: '서울대공원',
+    3: '올림픽공원',
+    4: '석촌호수',
+    5: '올림픽공원',
+    6: '장태산자연휴양림',
+    7: '불국사'
+  };
   function getDraft(gid) { return Object.assign({ date: '', place: '', author: '' }, store.get('draft:' + gid, null) || {}); }
   function setDraft(gid, key, value) { const d = getDraft(gid); d[key] = value; store.set('draft:' + gid, d); }
   function statusText(g) {
@@ -1334,10 +1338,12 @@ const SPOTS = {
     const area = AREAS[g.area];
     const draft = getDraft(g.id);
     const server = app.groups[g.id];
+    const assignedPlace = TEAM_PLACES[g.id] || SPOTS[area.spots].items[0].name;
     if (!draft.date && server.date) draft.date = server.date;
-    if (!draft.place && server.place) draft.place = server.place;
+    // 조별 지정 장소를 인증 탭의 기본 장소로 자동 입력합니다.
+    if (!draft.place) draft.place = assignedPlace;
     const notes = getNotes(g.id);
-    const placeInput = h('input', { class: 'input', id: 'cert-place', type: 'text', maxlength: 60, placeholder: '예: ' + SPOTS[area.spots].items[0].name, value: draft.place,
+    const placeInput = h('input', { class: 'input', id: 'cert-place', type: 'text', maxlength: 60, placeholder: assignedPlace, value: draft.place,
       oninput: function (e) { setDraft(g.id, 'place', e.target.value); } });
     const dateHint = h('span', { class: 'hint' }, g.areaLabel + ' 진행 기간: ' + area.period);
     const dateInput = h('input', { class: 'input', id: 'cert-date', type: 'date', value: draft.date,
@@ -1358,9 +1364,7 @@ const SPOTS = {
           h('h3', { class: 'h3' }, '날짜 · 장소'),
           h('div', { class: 'field' }, h('label', { for: 'cert-date' }, '단풍놀이 날짜'), dateInput, dateHint),
           h('div', { class: 'field' }, h('label', { for: 'cert-place' }, '장소'), placeInput,
-            h('div', { class: 'chips' }, SPOTS[area.spots].items.slice(0, 6).map(function (s) {
-              return h('button', { type: 'button', class: 'chip', onclick: function () { placeInput.value = s.name; setDraft(g.id, 'place', s.name); } }, s.name);
-            })))),
+            h('span', { class: 'hint' }, '조별 지정 장소: ' + assignedPlace + ' (필요하면 수정할 수 있습니다)'))),
         h('div', { class: 'card stack' },
           h('div', { class: 'row between' }, h('h3', { class: 'h3' }, '단체 인증샷'), h('span', { class: 'small muted num', id: 'cert-photo-count' }, '0 / ' + MAX_PHOTOS + '장')),
           h('div', { class: 'thumbs', id: 'cert-thumbs', hidden: true }),
